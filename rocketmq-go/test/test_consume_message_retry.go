@@ -66,7 +66,7 @@ func main() {
 	message.SetBody([]byte(testMessageBody))
 	message.SetTag(tag)
 	result, err := producer.Send(message)
-	glog.Infof("test sendMessageResult messageId=[%s] err=[%s]", result.MsgID(), err)
+	glog.Infof("test sendMessageResult messageId=[%s] err=[%v]", result.MsgID(), err)
 	for i := 0; i < 3; i++ {
 		select {
 		case <-chResult:

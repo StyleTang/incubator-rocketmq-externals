@@ -68,7 +68,7 @@ func main() {
 	result, err := producer.Send(message)
 	startTime = time.Now()
 	messageId = result.MsgID()
-	glog.Infof("test sendMessageResult messageId=[%s] err=[%s]", result.MsgID(), err)
+	glog.Infof("test sendMessageResult messageId=[%s] err=[%v]", result.MsgID(), err)
 	select {
 	case <-chResult:
 	case <-time.After(time.Second * 30):

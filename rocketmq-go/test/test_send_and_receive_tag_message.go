@@ -60,7 +60,7 @@ func main() {
 		message.SetBody([]byte("Hello world"))
 		message.SetTag("tag" + util.IntToString(i))
 		result, err := producer.Send(message)
-		glog.Infof("test sendMessageResult messageId=[%s] err=[%s]", result.MsgID(), err)
+		glog.Infof("test sendMessageResult messageId=[%s] err=[%v]", result.MsgID(), err)
 	}
 	for i := 0; i < 3; i++ {
 		select {

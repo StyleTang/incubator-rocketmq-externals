@@ -67,7 +67,7 @@ func main() {
 	message.SetBody([]byte(bigMessageBody))
 	message.SetTag("compress_message_test")
 	result, err := producer.Send(message)
-	glog.Infof("test sendMessageResult messageId=[%s] err=[%s]", result.MsgID(), err)
+	glog.Infof("test sendMessageResult messageId=[%s] err=[%v]", result.MsgID(), err)
 	select {
 	case <-chResult:
 	case <-time.After(time.Second * 30):

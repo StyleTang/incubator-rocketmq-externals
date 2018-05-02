@@ -43,5 +43,5 @@ func main() {
 	message.SetTopic(testTopic)
 	message.SetBody([]byte("hello World"))
 	result, err := producer.Send(message)
-	glog.Infof("test sendMessageResult result=[%s] err=[%s]", result.String(), err)
+	glog.Infof("test sendMessageResult result=[%s] err=[%v]", result.String(), err)
 }

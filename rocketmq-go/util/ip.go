@@ -69,7 +69,7 @@ func getIp() (ip net.IP) {
 	return
 }
 func isIntranetIpv4(ip string) bool {
-	if strings.HasPrefix(ip, "192.168.") || strings.HasPrefix(ip, "169.254.") {
+	if strings.HasPrefix(ip, "192.168.") || strings.HasPrefix(ip, "169.254.") || strings.HasPrefix(ip, "172.") || strings.HasPrefix(ip, "10.") {
 		return true
 	}
 	return false
